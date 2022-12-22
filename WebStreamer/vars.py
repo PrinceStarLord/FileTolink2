@@ -29,7 +29,7 @@ class Var(object):
     else:
         ON_HEROKU = False
     FQDN = (
-        str(environ.get("FQDN", "3.144.203.244"))
+        str(environ.get("FQDN", "94.176.238.164"))
         if not ON_HEROKU or environ.get("FQDN")
         else APP_NAME + ".herokuapp.com"
     )
