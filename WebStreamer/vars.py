@@ -21,7 +21,7 @@ class Var(object):
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
     HAS_SSL = environ.get("HAS_SSL", False)
     HAS_SSL = True if str(HAS_SSL).lower() == "true" else False
-    NO_PORT = environ.get("NO_PORT", True)
+    NO_PORT = environ.get("NO_PORT", False)
     NO_PORT = True if str(NO_PORT).lower() == "true" else False
     if "DYNO" in environ:
         ON_HEROKU = True
