@@ -20,7 +20,7 @@ logging.basicConfig(
               logging.FileHandler("streambot.log", mode="a", encoding="utf-8")],)
 
 logging.getLogger("aiohttp").setLevel(logging.ERROR)
-logging.getLogger("pyrogram").setLevel(logging.ERROR)
+logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
 
 server = web.AppRunner(web_server())
