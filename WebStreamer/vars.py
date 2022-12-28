@@ -1,5 +1,3 @@
-# This file is a part of FileStreamBot
-
 from os import environ
 from dotenv import load_dotenv
 
@@ -8,9 +6,9 @@ load_dotenv()
 
 class Var(object):
     MULTI_CLIENT = False
-    API_ID = int(environ.get("API_ID","5291894"))
-    API_HASH = str(environ.get("API_HASH","e15ad5a64cb8bd39b2be463d0314295f"))
-    BOT_TOKEN = str(environ.get("BOT_TOKEN","5822788845:AAFI54EmZTJsLaCkif_nVaeUiqSibzlfYV8"))
+    API_ID = int(environ.get("API_ID",""))
+    API_HASH = str(environ.get("API_HASH",""))
+    BOT_TOKEN = str(environ.get("BOT_TOKEN",""))
     SLEEP_THRESHOLD = int(environ.get("SLEEP_THRESHOLD", "60"))  # 1 minte
     WORKERS = int(environ.get("WORKERS", "6"))  # 6 workers = 6 commands at once
     BIN_CHANNEL = int(
@@ -40,7 +38,7 @@ class Var(object):
             "s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT)
         )
 
-    DATABASE_URL = str(environ.get('DATABASE_URL',"mongodb+srv://renamev3-1:renamev3-1@cluster0.hyv9toa.mongodb.net/?retryWrites=true&w=majority"))
+    DATABASE_URL = str(environ.get('DATABASE_URL',""))
     UPDATES_CHANNEL = str(environ.get('UPDATES_CHANNEL', "OTSeries"))
     PAGE_LINK = environ.get('PAGE_LINK', None)
     OWNER_ID = int(environ.get('OWNER_ID', '1132901778'))
